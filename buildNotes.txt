@@ -1,0 +1,11 @@
+Logic Statement
+Better learn logic gates before trying this one.
+
+Module ID: logicStatement
+
+Created by Short_c1rcuit
+
+Manual available here: https://ktane.timwi.de/HTML/Logic%20Statement.html
+
+Build 1.0 notes:
+Initial release
