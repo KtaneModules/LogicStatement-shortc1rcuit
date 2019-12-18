@@ -12,3 +12,6 @@ Initial release
 
 Build 1.1 notes:
 Added Twitch Plays support
+
+Build 1.2 notes:
+Fixed logic issues

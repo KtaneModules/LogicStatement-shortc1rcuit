@@ -120,6 +120,13 @@ public class LogicStatement : MonoBehaviour
 		gate1 = logicGates[UnityEngine.Random.Range(0, 8)];
 		gate2 = logicGates[UnityEngine.Random.Range(0, 8)];
 
+		TorF[0] = "¬F";
+		TorF[1] = "¬F";
+		TorF[2] = "F";
+
+		gate1 = logicGates[6];
+		gate2 = logicGates[2];
+
 		//Displays the statement on the screen
 		if (bracketLeft)
 		{
@@ -215,7 +222,7 @@ public class LogicStatement : MonoBehaviour
 			GetComponent<KMAudio>().PlayGameSoundAtTransform(KMSoundOverride.SoundEffect.ButtonPress, transform);
 
 			//This XNOR gate returns true when the correct button is pressed (buttons[0] is the true button)
-			if (Array.IndexOf(buttons, button) == 0 == (result == "T"))
+			if (!((button == buttons[0]) ^ (result == "T")))
 			{
 				//Stops the module
 				needy.HandlePass();
@@ -311,7 +318,7 @@ public class LogicStatement : MonoBehaviour
 		//IMP LEFT gate
 		else if (gate == '→')
 		{
-			if (!(left == "T" ^ right == "F"))
+			if (!(left == "T" & right == "F"))
 			{
 				return "T";
 			}
@@ -323,7 +330,7 @@ public class LogicStatement : MonoBehaviour
 		//IMP RIGHT gate
 		else
 		{
-			if (!(left == "F" ^ right == "T"))
+			if (!(left == "F" & right == "T"))
 			{
 				return "T";
 			}

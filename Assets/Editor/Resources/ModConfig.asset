@@ -17,7 +17,8 @@ MonoBehaviour:
   description: "Logic Statement\r\nBetter learn logic gates before trying this one.\r\n\r\nModule
     ID: logicStatement\r\n\r\nCreated by Short_c1rcuit\r\n\r\nManual available here:
     https://ktane.timwi.de/HTML/Logic%20Statement.html\r\n\r\nBuild 1.0 notes:\r\nInitial
-    release\n\nBuild 1.1 notes:\r\nAdded Twitch Plays support"
-  version: 1.1
+    release\n\nBuild 1.1 notes:\r\nAdded Twitch Plays support\n\nBuild 1.2 notes:\nFixed
+    logic issues"
+  version: 1.2
   outputFolder: build
   previewImage: {fileID: 2800000, guid: 0d2baad00310b1b40aece63a9959d678, type: 3}
