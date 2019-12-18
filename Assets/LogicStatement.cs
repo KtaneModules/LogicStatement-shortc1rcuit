@@ -47,6 +47,26 @@ public class LogicStatement : MonoBehaviour
 	static int moduleIdCounter = 1;
 	int moduleId;
 
+	//Twitch help message
+#pragma warning disable 414
+	private readonly string TwitchHelpMessage = @"Submit “True” with “!{0} T/True”. Submit “False” with “!{0} F/False”.";
+#pragma warning disable 414
+
+	//This part takes the command and sees if it says true or false then presses the correct button
+	public KMSelectable[] ProcessTwitchCommand(string command)
+	{
+		command = command.ToLowerInvariant().Trim();
+		if (command == "t" | command == "true")
+		{
+			return new[] { buttons[0] };
+		}
+		else if (command == "f" | command == "false")
+		{
+			return new[] { buttons[1] };
+		}
+		return null;
+	}
+
 	void Awake()
 	{
 		moduleId = moduleIdCounter++;

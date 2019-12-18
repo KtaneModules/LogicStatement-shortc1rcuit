@@ -9,3 +9,6 @@ Manual available here: https://ktane.timwi.de/HTML/Logic%20Statement.html
 
 Build 1.0 notes:
 Initial release
+
+Build 1.1 notes:
+Added Twitch Plays support
