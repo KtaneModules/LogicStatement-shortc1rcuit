@@ -120,13 +120,6 @@ public class LogicStatement : MonoBehaviour
 		gate1 = logicGates[UnityEngine.Random.Range(0, 8)];
 		gate2 = logicGates[UnityEngine.Random.Range(0, 8)];
 
-		TorF[0] = "¬F";
-		TorF[1] = "¬F";
-		TorF[2] = "F";
-
-		gate1 = logicGates[6];
-		gate2 = logicGates[2];
-
 		//Displays the statement on the screen
 		if (bracketLeft)
 		{
