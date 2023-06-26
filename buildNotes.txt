@@ -18,3 +18,9 @@ Fixed logic issues
 
 Build 1.3 notes:
 Removed test code that was causing the module to show the same statement repeatedly
+
+Build 1.4 notes:
+Fixed Z-Fighting issue
+
+Build 1.5 notes:
+Fixed logging issue

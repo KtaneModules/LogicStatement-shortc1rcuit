@@ -214,8 +214,8 @@ public class LogicStatement : MonoBehaviour
 			//Makes a sound when you press the button.
 			GetComponent<KMAudio>().PlayGameSoundAtTransform(KMSoundOverride.SoundEffect.ButtonPress, transform);
 
-			//This XNOR gate returns true when the correct button is pressed (buttons[0] is the true button)
-			if (!((button == buttons[0]) ^ (result == "T")))
+			//This will only return true if the sub-statements are both true or both false
+			if ((button == buttons[0]) == (result == "T"))
 			{
 				//Stops the module
 				needy.HandlePass();
@@ -227,7 +227,7 @@ public class LogicStatement : MonoBehaviour
 				//Strikes the module
 				needy.HandleStrike();
 				needy.HandlePass();
-				Debug.LogFormat("[Logic Statement #{0}] You pressed “{1}”. Incorrect. Strike!", moduleId, result);
+				Debug.LogFormat("[Logic Statement #{0}] You pressed “{1}”. Incorrect. Strike!", moduleId, button == buttons[0] ? "T" : "F");
 			}
 			//Resets the module
 			OnNeedyDeactivation();
@@ -299,7 +299,7 @@ public class LogicStatement : MonoBehaviour
 		//XNOR gate
 		else if (gate == '↔')
 		{
-			if (!(left == "T" ^ right == "T"))
+			if ((left == "T") == (right == "T"))
 			{
 				return "T";
 			}
